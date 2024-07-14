@@ -1,0 +1,212 @@
+<mat-card>
+  <mat-card-header>
+    <mat-toolbar color="primary">
+      <span>{{ this.data.headerValue }} Report </span>
+
+      <div class="toolbar-buttons">
+        <button mat-icon-button (click)="downloadTable()" *ngIf="(path === 'final-result')">
+          <mat-icon class="icon-download-btn-top">download</mat-icon>
+        </button>
+        <button mat-icon-button (click)="editSelectedRecords()" [disabled]="!anySelected()" *ngIf="!(path === 'final-result')">
+          <mat-icon class="icon-edit-btn-top">edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="saveEditedRecords()" [disabled]="!anySelected()" *ngIf="!(path === 'final-result')">
+          <mat-icon class="icon-save-btn-top">save</mat-icon>
+        </button>
+        <button mat-icon-button class="close-btn-top" (click)="onClose()" tabindex="-1">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sampleId">
+          <th mat-header-cell *matHeaderCellDef> Sample ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.sampleId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sampleDatetime">
+          <th mat-header-cell *matHeaderCellDef> Sample Datetime </th>
+          <td mat-cell *matCellDef="let element"> {{element.sampleDatetime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="shift">
+          <th mat-header-cell *matHeaderCellDef> Shift </th>
+          <td mat-cell *matCellDef="let element"> {{element.shift}} </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="SiO2">
+          <th mat-header-cell *matHeaderCellDef> SiO2 </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewSiO2">
+              <input matInput [(ngModel)]="element.SiO2">
+            </ng-container>
+            <ng-template #viewSiO2>
+              {{element.SiO2}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="Fe2O3">
+          <th mat-header-cell *matHeaderCellDef> Fe2O3 </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewFe2O3">
+              <input matInput [(ngModel)]="element.Fe2O3">
+            </ng-container>
+            <ng-template #viewFe2O3>
+              {{element.Fe2O3}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="TiO2">
+          <th mat-header-cell *matHeaderCellDef> TiO2 </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewTiO2">
+              <input matInput [(ngModel)]="element.TiO2">
+            </ng-container>
+            <ng-template #viewTiO2>
+              {{element.TiO2}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="V2O5">
+          <th mat-header-cell *matHeaderCellDef> V2O5 </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewV2O5">
+              <input matInput [(ngModel)]="element.V2O5">
+            </ng-container>
+            <ng-template #viewV2O5>
+              {{element.V2O5}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="P2O5">
+          <th mat-header-cell *matHeaderCellDef> P2O5 </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewP2O5">
+              <input matInput [(ngModel)]="element.P2O5">
+            </ng-container>
+            <ng-template #viewP2O5>
+              {{element.P2O5}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="Na2O">
+          <th mat-header-cell *matHeaderCellDef> Na2O </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewNa2O">
+              <input matInput [(ngModel)]="element.Na2O">
+            </ng-container>
+            <ng-template #viewNa2O>
+              {{element.Na2O}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="CaO">
+          <th mat-header-cell *matHeaderCellDef> CaO </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewCaO">
+              <input matInput [(ngModel)]="element.CaO">
+            </ng-container>
+            <ng-template #viewCaO>
+              {{element.CaO}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRF'" matColumnDef="ZnO">
+          <th mat-header-cell *matHeaderCellDef> ZnO </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewZnO">
+              <input matInput [(ngModel)]="element.ZnO">
+            </ng-container>
+            <ng-template #viewZnO>
+              {{element.ZnO}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="data.headerValue === 'XRD'" matColumnDef="AlphaAlumina">
+          <th mat-header-cell *matHeaderCellDef> Alpha Alumina </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.isEditing; else viewAlphaAlumina">
+              <input matInput [(ngModel)]="element.AlphaAlumina">
+            </ng-container>
+            <ng-template #viewAlphaAlumina>
+              {{element.AlphaAlumina}}
+            </ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="remarks">
+          <th mat-header-cell *matHeaderCellDef> Remarks </th>
+          <td mat-cell *matCellDef="let element"> {{element.remarks}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isManual">
+          <th mat-header-cell *matHeaderCellDef> Is Manual </th>
+          <td mat-cell *matCellDef="let element"> {{element.isManual}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isConfirm">
+          <th mat-header-cell *matHeaderCellDef> Is Confirm </th>
+          <td mat-cell *matCellDef="let element"> {{element.isConfirm}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="analysisBy">
+          <th mat-header-cell *matHeaderCellDef> Analysis By </th>
+          <td mat-cell *matCellDef="let element"> {{element.analysisBy}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="analysisDate">
+          <th mat-header-cell *matHeaderCellDef> Analysis Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.analysisDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="modifiedBy">
+          <th mat-header-cell *matHeaderCellDef> Modified By </th>
+          <td mat-cell *matCellDef="let element"> {{element.modifiedBy}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="modifiedDate">
+          <th mat-header-cell *matHeaderCellDef> Modified Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.modifiedDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit" *ngIf="!(path === 'final-result')">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="onEdit(element)" *ngIf="!element.isEditing">
+              <mat-icon class="icon-button">edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="onSave(element)" *ngIf="element.isEditing">
+              <mat-icon class="icon-button">save</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+  <!-- <button mat-raised-button color="primary" class="close-btn-bottom" (click)="onClose()">Close</button> -->
+</mat-card>

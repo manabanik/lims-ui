@@ -1,0 +1,1119 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="'Dashboad'" [items]="['Home']" [active_item]="'Dashboad'"></app-breadcrumb>
+    </div>
+    <div class="row ">
+      <!-- <div class="col-xl-8 ">
+        <div class="card">
+          <div class="header">
+            <h2>Raw Material Analytics</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="body p-5">
+            <apx-chart [series]="projectOptions.series!" [chart]="projectOptions.chart!" [yaxis]="projectOptions.yaxis!"
+              [xaxis]="projectOptions.xaxis!" [labels]="projectOptions.labels!" [stroke]="projectOptions.stroke!"
+              [plotOptions]="projectOptions.plotOptions!" [markers]="projectOptions.markers!"
+              [grid]="projectOptions.grid!" [fill]="projectOptions.fill!" [tooltip]="projectOptions.tooltip!"
+              [colors]="projectOptions.colors!">
+            </apx-chart>
+          </div>
+        </div>
+
+      </div> -->
+      <div class="col-xl-12 ">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card card-statistic-2">
+              <div class="clearfix">
+                <div class="card-right">
+                  <div>
+                    <h6 class="float-end">Alpha_Alumina</h6>
+                  </div>
+                  <div class="m-r-10 m-l-10">
+                    <h5 class="font-weight-bold float-end mb-0"> $20,125</h5>
+                  </div>
+                </div>
+              </div>
+              <apx-chart [series]="smallChart1Options.series!" [chart]="smallChart1Options.chart!"
+                [xaxis]="smallChart1Options.xaxis!" [yaxis]="smallChart1Options.yaxis!"
+                [colors]="smallChart1Options.colors!" [stroke]="smallChart1Options.stroke!"
+                [legend]="smallChart1Options.legend!" [tooltip]="smallChart1Options.tooltip!"
+                [dataLabels]="smallChart1Options.dataLabels!"></apx-chart>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card card-statistic-2">
+              <div class="clearfix">
+                <div class="card-right">
+                  <div>
+                    <h6 class="float-end">CSRatio</h6>
+                  </div>
+                  <div class="m-r-10 m-l-10">
+                    <h5 class="font-weight-bold float-end mb-0"> 129</h5>
+                  </div>
+                </div>
+              </div>
+              <apx-chart [series]="smallChart2Options.series!" [chart]="smallChart2Options.chart!"
+                [xaxis]="smallChart2Options.xaxis!" [yaxis]="smallChart2Options.yaxis!"
+                [colors]="smallChart2Options.colors!" [stroke]="smallChart2Options.stroke!"
+                [legend]="smallChart2Options.legend!" [tooltip]="smallChart2Options.tooltip!"
+                [dataLabels]="smallChart2Options.dataLabels!"></apx-chart>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card card-statistic-2">
+              <div class="clearfix">
+                <div class="card-right">
+                  <div>
+                    <h6 class="float-end">RPRatio</h6>
+                  </div>
+                  <div class="m-r-10 m-l-10">
+                    <h5 class="font-weight-bold float-end mb-0">154</h5>
+                  </div>
+                </div>
+              </div>
+              <apx-chart [series]="smallChart3Options.series!" [chart]="smallChart3Options.chart!"
+                [xaxis]="smallChart3Options.xaxis!" [yaxis]="smallChart3Options.yaxis!"
+                [colors]="smallChart3Options.colors!" [stroke]="smallChart3Options.stroke!"
+                [legend]="smallChart3Options.legend!" [tooltip]="smallChart3Options.tooltip!"
+                [dataLabels]="smallChart3Options.dataLabels!"></apx-chart>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card card-statistic-2">
+              <div class="clearfix">
+                <div class="card-right">
+                  <div>
+                    <h6 class="float-end">Caustic</h6>
+                  </div>
+                  <div class="m-r-10 m-l-10">
+                    <h5 class="font-weight-bold float-end mb-0">650</h5>
+                  </div>
+                </div>
+              </div>
+              <apx-chart [series]="smallChart4Options.series!" [chart]="smallChart4Options.chart!"
+                [xaxis]="smallChart4Options.xaxis!" [yaxis]="smallChart4Options.yaxis!"
+                [colors]="smallChart4Options.colors!" [stroke]="smallChart4Options.stroke!"
+                [legend]="smallChart4Options.legend!" [tooltip]="smallChart4Options.tooltip!"
+                [dataLabels]="smallChart4Options.dataLabels!"></apx-chart>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-bnner">
+          <div class="row">
+            <div class="col-lg-6">
+              <img style="height: 135px;" src="assets/images/pages/home-1.png" alt="">
+            </div>
+            <div class="col-lg-6">
+              <h6>Download Reports</h6>
+              <p>Download employee salary reports.</p>
+              <a [routerLink]="['/admin/dashboard/main']">Download <i class="fas fa-arrow-down"></i> </a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="header">
+            <h2>Product Report</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <div class="row">
+              <div class="col-md-12 col-xl-4 d-flex flex-column justify-content-center">
+                <div class="m-l-10 m-b-20">
+                  <h4>$1,17,289</h4>
+                  <h5 class="font-weight-light col-green">Total Income</h5>
+                  <p class="mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor.
+                  </p>
+                </div>
+                <div class="m-l-10">
+                  <h4>$65,984</h4>
+                  <h5 class="font-weight-light col-orange">Total Expense</h5>
+                  <p class="mb-2"> Cras dapibus. Vivamus elementum semper nisi. Aenean
+                    vulputate eleifend tellus.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12 col-xl-8">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="tx-primary m-b-30">Country Wise Sales</h5>
+                    <div class="mb-3 mt-3">
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">India</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate" class="progress-m progress-round progress-shadow"
+                                value="40">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">154</h5>
+                            </td>
+                          </tr>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">USA</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate"
+                                class="progress-m progress-round green-progress progress-shadow" value="90">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">423</h5>
+                            </td>
+                          </tr>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">Shrilanka</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate"
+                                class="progress-m progress-round sky-progress progress-shadow" value="65">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">265</h5>
+                            </td>
+                          </tr>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">Australia</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate"
+                                class="progress-m progress-round orange-progress progress-shadow" value="50">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">341</h5>
+                            </td>
+                          </tr>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">Japan</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate"
+                                class="progress-m progress-round red-progress progress-shadow" value="58">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">238</h5>
+                            </td>
+                          </tr>
+                          <tr class="tr-height-m">
+                            <td class="text-muted">Itely</td>
+                            <td class="w-100 px-0">
+                              <mat-progress-bar mode="determinate" class="progress-m progress-round progress-shadow"
+                                value="40">
+                              </mat-progress-bar>
+                            </td>
+                            <td>
+                              <h5 class="font-weight-bold mb-0">153</h5>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-3"> -->
+                    <!-- chart -->
+                   <!-- <div class="recent-report__chart">
+                      <canvas baseChart height="150" class="chart" [data]="doughnutChartData" [type]="doughnutChartType"
+                        [options]="doughnutChartOptions">
+                      </canvas>
+                    </div>
+                    <div class="country-chart">
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-green"></span>
+                          <span>Itely</span>
+                        </div>
+                        <p class="mb-0">$30,289</p>
+                      </div>
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-orange"></span>
+                          <span>USA</span>
+                        </div>
+                        <p class="mb-0">$25,968</p>
+                      </div>
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-purple"></span>
+                          <span>India</span>
+                        </div>
+                        <p class="mb-0">$45,278</p>
+                      </div>
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-red"></span>
+                          <span>Shrilanka</span>
+                        </div>
+                        <p class="mb-0">$21,376</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="header">
+            <h2>Invoices</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table table-hover ">
+                <thead>
+                  <tr>
+                    <th>Sample ID</th>
+                    <th>Feed Bxt</th>
+                    <th>PDS</th>
+                    <th>BOP</th>
+                    <th>Settler </th>
+                    <th>Filter Tank </th>
+                    <th>HOF </th>
+                    <th>PPT (LA)</th>
+                    <th>PPT (LG)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->RP
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>Caustic
+                       </td>
+                    <td>
+                      Caustic 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      Caustic
+                    </td>
+                    <td>
+                      Caustic
+                    </td>
+                    <td>
+                      Caustic
+                    </td>
+                    <td>
+                      Caustic
+                    </td>
+                    <td>
+                      Caustic
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->RP
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>Alumina
+                       </td>
+                    <td>
+                      Alumina 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      Alumina
+                    </td>
+                    <td>
+                      Alumina
+                    </td>
+                    <td>
+                      Alumina
+                    </td>
+                    <td>
+                      Alumina
+                    </td>
+                    <td>
+                      Alumina
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->RP
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>RP
+                       </td>
+                    <td>
+                      RP 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      RP
+                    </td>
+                    <td>
+                      RP
+                    </td>
+                    <td>
+                      RP
+                    </td>
+                    <td>
+                      RP
+                    </td>
+                    <td>
+                      RP
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->SOLID
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>GPL
+                       </td>
+                    <td>
+                      GPL 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->SOLID
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>GPL
+                       </td>
+                    <td>
+                      GPL 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->SOLID
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>% solids
+                       </td>
+                    <td>
+                      GPL 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      MGPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                    <td>
+                      GPL
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>THA
+                       </td>
+                    <td>
+                      THA 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      THA
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>Na2O
+                       </td>
+                    <td>
+                      Na2O 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      Na2O
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td> <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>LOI
+                       </td>
+                    <td>
+                      LOI 
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      LOI
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td> Fe2O3<!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td>SiO2
+                       <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td>
+                      TA <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td>
+                      LOI <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td>
+                      Moisture <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><!-- <a [routerLink]="['/admin/accounts/invoice']"> RP </a>-->Wet Analysis
+                    </td>
+                    <td>
+                      THA <!-- <img src="assets/images/user/user1.jpg" alt="" class="user_img"> -->
+                     </td> 
+                    <td>
+                       </td>
+                    <td>
+                       
+                      <!-- <div class="badge badge-solid-green">Paid</div> -->
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="float-start">
+              <h6>Average Daily Bill</h6>
+              <h5>129 Dollar <span class="text-muted font-12">(Average)</span></h5>
+            </div>
+            <div class="mb-5">
+              <apx-chart [series]="performanceRateChartOptions.series!" [chart]="performanceRateChartOptions.chart!"
+                [xaxis]="performanceRateChartOptions.xaxis!" [stroke]="performanceRateChartOptions.stroke!"
+                [colors]="performanceRateChartOptions.colors!" [dataLabels]="performanceRateChartOptions.dataLabels!"
+                [legend]="performanceRateChartOptions.legend!" [markers]="performanceRateChartOptions.markers!"
+                [grid]="performanceRateChartOptions.grid!" [yaxis]="performanceRateChartOptions.yaxis!"
+                [tooltip]="performanceRateChartOptions.tooltip!" [title]="performanceRateChartOptions.title!">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Client Survay</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <apx-chart [series]="areaChartOptions.series!" [chart]="areaChartOptions.chart!"
+              [xaxis]="areaChartOptions.xaxis!" [yaxis]="areaChartOptions.yaxis!" [colors]="areaChartOptions.colors!"
+              [stroke]="areaChartOptions.stroke!" [legend]="areaChartOptions.legend!" [grid]="areaChartOptions.grid!"
+              [tooltip]="areaChartOptions.tooltip!" [dataLabels]="areaChartOptions.dataLabels!"></apx-chart>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Support Tickets Survay</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <apx-chart [series]="barChartOptions.series!" [chart]="barChartOptions.chart!"
+              [dataLabels]="barChartOptions.dataLabels!" [plotOptions]="barChartOptions.plotOptions!"
+              [responsive]="barChartOptions.responsive!" [xaxis]="barChartOptions.xaxis!" [grid]="barChartOptions.grid!"
+              [tooltip]="barChartOptions.tooltip!" [legend]="barChartOptions.legend!" [fill]="barChartOptions.fill!">
+            </apx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="header">
+            <h2>Projects</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Project Name</th>
+                    <th>Employees Team</th>
+                    <th>Team Leader</th>
+                    <th>Priority</th>
+                    <th>Open Task</th>
+                    <th>Completed Task</th>
+                    <th>Status</th>
+                    <th>Documents</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Project A</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user1.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user2.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user3.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+4</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>John Doe</td>
+                    <td>
+                      <div class="badge col-blue">Medium</div>
+                    </td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round sky-progress progress-shadow" value="37">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Project B</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user7.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user2.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+3</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>Sarah Smith</td>
+                    <td>
+                      <div class="badge col-green">Low</div>
+                    </td>
+                    <td>25</td>
+                    <td>18</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round green-progress progress-shadow" value="73">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Project C</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user2.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user1.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user8.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+2</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>Airi Satou</td>
+                    <td>
+                      <div class="badge col-blue">Medium</div>
+                    </td>
+                    <td>33</td>
+                    <td>21</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round sky-progress progress-shadow" value="52">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Project D</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user5.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user3.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user9.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+4</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>Angelica Ramos</td>
+                    <td>
+                      <div class="badge col-orange">High</div>
+                    </td>
+                    <td>26</td>
+                    <td>15</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round orange-progress progress-shadow" value="40">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Project E</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user2.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user4.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+3</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>Ashton Cox</td>
+                    <td>
+                      <div class="badge col-green">Low</div>
+                    </td>
+                    <td>12</td>
+                    <td>11</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round green-progress progress-shadow" value="88">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Project F</td>
+                    <td class="text-truncate">
+                      <ul class="list-unstyled order-list">
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user6.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user9.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><img class="rounded-circle" src="assets/images/user/user4.jpg"
+                            alt="user">
+                        </li>
+                        <li class="avatar avatar-sm"><span class="badge">+2</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>Cara Stevens</td>
+                    <td>
+                      <div class="badge col-orange">High</div>
+                    </td>
+                    <td>43</td>
+                    <td>22</td>
+                    <td>
+                      <mat-progress-bar mode="determinate"
+                        class="progress-xs progress-round oragne-progress progress-shadow text-left" value="67">
+                      </mat-progress-bar>
+                    </td>
+                    <td>
+                      <i class="far fa-file-pdf tbl-pdf"></i>
+                    </td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Edit">
+                        <app-feather-icons [icon]="'edit'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                      <button mat-icon-button class="tbl-action-btn" matTooltip="Delete">
+                        <app-feather-icons [icon]="'trash-2'" [class]="'tbl-fav-delete'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </section> -->

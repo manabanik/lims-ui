@@ -1,0 +1,42 @@
+[
+    {
+      "sampleId": "12345",
+      "sampleDatetime": "2023-07-07T10:00:00Z",
+      "shift": "Morning",
+      "SiO2": "25.67",
+      "Fe2O3": "5.43",
+      "TiO2": "1.23",
+      "V2O5": "0.56",
+      "P2O5": "0.78",
+      "Na2O": "3.21",
+      "CaO": "7.89",
+      "ZnO": "0.65",
+      "remarks": "Sample collected from north section",
+      "isManual": "true",
+      "isConfirm": "false",
+      "analysisBy": "Dr. Smith",
+      "analysisDate": "2023-07-07T14:00:00Z",
+      "modifiedBy": "John Doe",
+      "modifiedDate": "2023-07-08T09:00:00Z"
+    },
+    {
+      "sampleId": "12346",
+      "sampleDatetime": "2023-07-08T10:00:00Z",
+      "shift": "Afternoon",
+      "SiO2": "22.34",
+      "Fe2O3": "4.56",
+      "TiO2": "1.34",
+      "V2O5": "0.67",
+      "P2O5": "0.89",
+      "Na2O": "3.12",
+      "CaO": "7.45",
+      "ZnO": "0.75",
+      "remarks": "Sample collected from south section",
+      "isManual": "false",
+      "isConfirm": "true",
+      "analysisBy": "Dr. Doe",
+      "analysisDate": "2023-07-08T14:00:00Z",
+      "modifiedBy": "Jane Doe",
+      "modifiedDate": "2023-07-09T09:00:00Z"
+    }
+  ]  

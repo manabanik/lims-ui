@@ -1,0 +1,100 @@
+[{
+  "id": "002",
+  "type":"Domestic",
+  "bagId" : "BG-001",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir1"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-002",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir2"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-003",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir3"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-004",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir4"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-005",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir5"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-006",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir6"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-007",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir7"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-008",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir8"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-009",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir9"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-0010",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir10"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-0011",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir12"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-0012",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir13"
+},
+{
+  "id": "002","type":"Domestic",
+  "bagId" : "BG-0013",
+  "sampleId": "SM1321",
+  "analysisDT": "2023-07-07T14:00:00",
+  "analyzedBy": "Abir14"
+},
+{
+  "id": "002","type":"Import",
+  "bagId" : "BG-0014",
+  "sampleId": "SM1322",
+  "analysisDT": "2023-07-07202314:00:00",
+  "analyzedBy": "Abir15"
+}
+]

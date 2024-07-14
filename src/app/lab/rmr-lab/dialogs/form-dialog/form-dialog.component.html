@@ -1,0 +1,270 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <!-- <img [src]='resumes.img' alt="avatar"> -->
+        <div class="modal-about">
+          <!-- {{dialogTitle}} -->
+           Add New Raw Material Received at Lab From
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" class="modal-close-button" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="resumesForm" (ngSubmit)="submit()">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>PO Number</mat-label>
+            <input type="text"
+            placeholder="Pick one"
+            aria-label="Number"
+            matInput
+            formControlName="POnumber"
+           >
+            <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getPO($event.option.value)'>
+              @for (option of options; track option) {
+                <mat-option [value]="resumes">{{resumes.POnumber}}</mat-option>
+              }
+            </mat-autocomplete> -->
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>description</mat-icon> -->
+            @if (resumesForm.get('POnumber')?.hasError('required')) {
+            <mat-error>
+              PO number is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Raw Material Type</mat-label>
+            <input matInput formControlName="rawMaterialType" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('rawMaterialType')?.hasError('required')) {
+            <mat-error>
+              Raw Material Type is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Source Of Origin</mat-label>
+            <input matInput formControlName="SourceOfOrigin" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon> -->
+            @if (resumesForm.get('SourceOfOrigin')?.hasError('required')) {
+            <mat-error>
+              Source Of Origin is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input matInput formControlName="Quantity" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('Quantity')?.hasError('required')) {
+            <mat-error>
+              Quantity is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Rake/Vechile</mat-label>
+            <input matInput formControlName="RakeVechile" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon> -->
+            @if (resumesForm.get('RakeVechile')?.hasError('required')) {
+            <mat-error>
+              Rake/Vechile is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Received TD</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="ReceivedTD">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (resumesForm.get('ReceivedTD')?.hasError('required')) {
+            <mat-error>
+              Please select Received TD
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>RakeID</mat-label>
+            <input matInput formControlName="RakeID" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon> -->
+            @if (resumesForm.get('RakeID')?.hasError('required')) {
+            <mat-error>
+              Rake ID is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Bag ID</mat-label>
+            <input matInput formControlName="bagId" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('bagId')?.hasError('required')) {
+            <mat-error>
+              Bag Id is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sample Collention DT</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="SampleCollentionDT">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (resumesForm.get('SampleCollentionDT')?.hasError('required')) {
+            <mat-error>
+              Please select Sample Collention DT
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>SampleCollectorName</mat-label>
+            <input matInput formControlName="SampleCollectorName" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('SampleCollectorName')?.hasError('required')) {
+            <mat-error>
+              Sample Collector Name is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Receiving sample D&T</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="sampleLabRecevingDT">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (resumesForm.get('sampleLabRecevingDT')?.hasError('required')) {
+            <mat-error>
+              Please select Sample Collention DT
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sample Collention DT</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="SampleCollentionDT">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (resumesForm.get('SampleCollentionDT')?.hasError('required')) {
+            <mat-error>
+              Please select Sample Collention DT
+            </mat-error>
+            }
+          </mat-form-field>
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Chemist Name</mat-label>
+            <input matInput formControlName="chemistName" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('chemistName')?.hasError('required')) {
+            <mat-error>
+              Sample Collector Name is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Analysis Completion D&T</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="analysisCompletionDT">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (resumesForm.get('analysisCompletionDT')?.hasError('required')) {
+            <mat-error>
+              Please select Sample Collention DT
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sample ID</mat-label>
+            <input matInput formControlName="sampleId" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('sampleId')?.hasError('required')) {
+            <mat-error>
+              Sample ID is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sampling SOP</mat-label>
+            <input matInput formControlName="Attachmentfile" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('Attachmentfile')?.hasError('required')) {
+            <mat-error>
+              Sampling SOP File is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Intrument used for analysis</mat-label>
+            <input matInput formControlName="InstrumentUsed" required>
+            <!-- <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon> -->
+            @if (resumesForm.get('InstrumentUsed')?.hasError('required')) {
+            <mat-error>
+              Sample Collector Name is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row" align="end">
+            <button mat-raised-button color="primary" [disabled]="!resumesForm.valid" [mat-dialog-close]="1"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

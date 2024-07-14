@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "Main"
+    },
+    "DASHBOARD": {
+      "TEXT": "Dashboard",
+      "LIST": {
+        "DASHBOARD1": "Dashboard ",
+        "DASHBOARD2": "Raw Materials",
+        "LIST": {
+          "ALL-PROJECTS": "Raw 1",
+          "ADD-PROJECT": "Raw 2",
+          "ESTIMATES": "Raw 3",
+          "PROJECT-DETAILS": "Raw 4"
+        }
+      }
+    },
+    "PROJECTS": {
+      "TEXT": "Reports & MIS",
+      "LIST": {
+        "ALL-PROJECTS": "Reports 1",
+        "ADD-PROJECT": "Reports 2",
+        "ESTIMATES": "Reports 3",
+        "PROJECT-DETAILS": "Reports 4"
+      }
+    },
+    "EMPLOYEES": {
+      "TEXT": "Employees",
+      "LIST": {
+        "ALL-EMPLOYEE": "All Employees",
+        "ADD-EMPLOYEE": "Add Employee",
+        "EDIT-EMPLOYEE": "Edit Employee",
+        "PROFILE": "Employee Profile"
+      }
+    },
+    "CLIENTS": {
+      "TEXT": "Instruments",
+      "LIST": {
+        "ALL-CLIENTS": "Instruments 1",
+        "ADD-CLIENT": "Instruments 2",
+        "EDIT-CLIENT": "Instruments 3"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Accounts",
+      "LIST": {
+        "ALL-PAYMENTS": "Accounts 1",
+        "ADD-PAYMENT": "Accounts 2",
+        "INVOICE": "Accounts 3"
+      }
+    },
+    "PAYROLL": {
+      "TEXT": "Task",
+      "LIST": {
+        "EMPLOYEE_SALARY": "Task 1",
+        "PAYSLIP": "Task 2 "
+      }
+    },
+    "LEADERS": {
+      "TEXT": "Leaders"
+    },
+    "JOBS": {
+      "TEXT": "Jobs",
+      "LIST": {
+        "JOBS_LIST": "Jobs List",
+        "RESUMES": "Resumes",
+        "CANDIDATES":"Candidates",
+        "SHORTLIST_CANDIDATES":"Shortlist Candidates"
+      }
+    },
+    "REPORTS": {
+      "TEXT": "Reports",
+      "LIST": {
+        "LEAVE_REPORT": "Leave Report",
+        "EXPENSE_REPORT": "Expense Report"
+      }
+    },
+    "EMPLOYEE": {    
+        "DASHBOARD": "Dashboard",
+        "ATTENDANCE": "Attendance",
+        "MY-LEAVES": "My Leaves",
+        "MYTEAM": "My Team",
+        "MYPROJECTS": "My Projects",
+        "MYTASKS": "My Tasks",
+        "SETTINGS": "Settings",
+        "CHAT": "Chat"
+    },
+    "LEAVES": {
+      "TEXT": "In Process",
+      "LIST": {
+        "LEAVE-REQUESTS": "2 MTPA",
+        "LEAVE-BALANCE": "3 MTPA"
+        
+      }
+    },
+    "HOLIDAYS": {
+      "TEXT": "Finish Goods",
+      "LIST": {
+        "ALL-HOLIDAYS": "Finish Goods 1",
+        "ADD-HOLIDAY": "Finish Goods 2",
+        "EDIT-HOLIDAY": "Finish Goods 3"
+      }
+    },
+    "ATTENDANCE": {
+      "TEXT": "Lab Formulation",
+      "LIST": {
+        "TODAY": "Formula 1",
+        "EMPLOYEE": "Formula 2",
+        "SHEET": "Formula 3"
+      }
+    },
+    "CLIENT": {    
+      "TEXT": "Client",
+      "DASHBOARD": "Dashboard",
+      "PROJECTS": {
+        "TEXT": "Projects",
+        "LIST": {
+          "MY-PROJECTS": "My Projects",
+          "PROJECT-DETAILS": "Project Details"
+        }
+      },
+      "SUPPORTS": {
+        "TEXT": "Supports",
+        "LIST": {
+          "TICKETS": "Tickets",
+          "TICKET-DETAILS": "Ticket Details"
+        }
+      },
+      "BILLING": "Billing",
+      "CHAT": "Chat",
+      "SETTINGS": "Settings"
+    },
+    "APPS": {
+      "TEXT": "Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendar"
+    },
+    "TASK": {
+      "TEXT": "Task"
+    },
+    "CONTACTS": {
+      "TEXT": "Contacts"
+    }
+  }
+}

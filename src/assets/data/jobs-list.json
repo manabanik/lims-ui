@@ -1,0 +1,19 @@
+[{
+    "id": "001",
+    "POnumber": "PO1321",
+    "rawMaterialType": "Buxaite",
+    "SourceOfOrigin": "Uttal",
+    "Quantity": "5 ton",
+    "RakeVechile": "Rake",
+    "ReceivedTD": "2022-02-10T14:22:18Z",
+    "RakeID": "RK1234",
+    "SampleCollectorName":"Aditya",
+    "SampleCollentionDT":"2022-02-12T14:22:18Z",
+    "bagId":"",
+    "sampleLabRecevingDT":"2022-02-12T14:22:18Z",
+    "chemistName":"deep",
+    "analysisCompletionDT":"2022-02-12T14:22:18Z",
+    "InstrumentUsed":"sample instrument"
+  }
+  
+]

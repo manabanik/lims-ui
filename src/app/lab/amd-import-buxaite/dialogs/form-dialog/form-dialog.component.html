@@ -1,0 +1,218 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <!-- <img [src]='resumes.img' alt="avatar"> -->
+        <div class="modal-about">
+          {{dialogTitle}}
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" class="modal-close-button" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="amdimportbuxaiteForm" (ngSubmit)="submit">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sample Id</mat-label>
+            <input type="text"
+            placeholder="Pick one"
+            aria-label="Number"
+            matInput
+            formControlName="SampleId"
+           >
+            <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getPO($event.option.value)'>
+              @for (option of options; track option) {
+                <mat-option [value]="amdimportbuxaiteForm">{{amdimportbuxaiteForm.POnumber}}</mat-option>
+              }
+            </mat-autocomplete> -->
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>description</mat-icon>
+            @if (amdimportbuxaiteForm.get('SampleId')?.hasError('required')) {
+            <mat-error>
+              Sample Id is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Analyzed By</mat-label>
+            <input matInput formControlName="AnalyzedBy" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('AnalyzedBy')?.hasError('required')) {
+            <mat-error>
+              Analyzed By is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Tha</mat-label>
+            <input matInput formControlName="Tha" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon>
+            @if (amdimportbuxaiteForm.get('Tha')?.hasError('required')) {
+            <mat-error>
+              Tha is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Mha</mat-label>
+            <input matInput formControlName="Mha" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('Mha')?.hasError('required')) {
+            <mat-error>
+              Mha is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Rs</mat-label>
+            <input matInput formControlName="Rs" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon>
+            @if (amdimportbuxaiteForm.get('Rs')?.hasError('required')) {
+            <mat-error>
+              Rs is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+       
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Moisture</mat-label>
+            <input matInput formControlName="Moisture" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>flag</mat-icon>
+            @if (amdimportbuxaiteForm.get('Moisture')?.hasError('required')) {
+            <mat-error>
+              Moisture is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>GhRatio</mat-label>
+            <input matInput formControlName="GhRatio" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('GhRatio')?.hasError('required')) {
+            <mat-error>
+              GhRatio is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>SizeLess150</mat-label>
+            <input matInput formControlName="SizeLess150" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('SizeLess150')?.hasError('required')) {
+            <mat-error>
+              Size is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Size125</mat-label>
+            <input matInput formControlName="Size125" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('Size125')?.hasError('required')) {
+            <mat-error>
+              Size is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+     
+        <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sample Collention DT</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="SampleCollentionDT">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (amdimportbuxaiteForm.get('SampleCollentionDT')?.hasError('required')) {
+            <mat-error>
+              Please select Sample Collention DT
+            </mat-error>
+            }
+          </mat-form-field>
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Size100</mat-label>
+            <input matInput formControlName="Size100" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('Size100')?.hasError('required')) {
+            <mat-error>
+              Size is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Action</mat-label>
+            <input matInput formControlName="Action" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('Action')?.hasError('required')) {
+            <mat-error>
+              Action is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+     
+        
+      </div>
+      <!-- <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Intrument used for analysis</mat-label>
+            <input matInput formControlName="InstrumentUsed" required>
+            <mat-icon class="material-icons-outlined color-icon p-3" matSuffix>business_center</mat-icon>
+            @if (amdimportbuxaiteForm.get('InstrumentUsed')?.hasError('required')) {
+            <mat-error>
+              Sample Collector Name is required
+            </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        
+        
+      </div> -->
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row" align="end">
+            <button mat-raised-button color="primary" [disabled]="!amdimportbuxaiteForm.valid" [mat-dialog-close]="1"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
